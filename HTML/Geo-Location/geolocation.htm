@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Geolocation in JavaScript</title>
+<script>
+    var Location = document.getElementById("Location");
+    function findLocation() {
+        document.getElementById("latitude").innerHTML = "Latitude :" + position.coords.latitude ;
+        document.getElementById("longitude").innerHTML = "Longitude :" + position.coords.longitude;   
+    }
+</script>
+</head>
+<body>
+    <p id="Location">Get Location</p>
+    <input type="button" onclick="findLocation()" value="Display Location">
+    <br>
+    <p>Your Location co-ordinates are :</p>
+    <p id="latitude"></p>
+    <p id="longitude"></p>
+</body>
+</html>

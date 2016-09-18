@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function hitMe() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You hit me " + sessionStorage.clickcount + " time(s) in this session.";
+    }
+}
+</script>
+</head>
+<body>
+<p><button onclick="hitMe()" type="button">Hit me!</button></p>
+<div id="result"></div>
+</body>
+</html>
+
